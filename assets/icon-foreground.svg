@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <!-- An "@" drawn from strokes (no font needed). Fits the adaptive-icon safe zone. -->
+  <g fill="none" stroke="#ffd34d" stroke-width="70" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="512" cy="512" r="95"/>
+    <path d="M607 440 V560 Q607 640 690 640 Q790 640 790 512 A278 278 0 1 0 650 752"/>
+  </g>
+</svg>

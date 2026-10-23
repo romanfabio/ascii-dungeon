@@ -1,0 +1,44 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+src-tauri/target/
+
+# Android build output and local config (never commit these)
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+android/keystore.properties
+android/capacitor-cordova-android-plugins/
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+android/app/src/main/res/xml/config.xml
+*.apk
+*.aab
+
+# Signing keys, credentials and environment files
+*.keystore
+*.jks
+*.p12
+*.pem
+keystore.properties
+google-services.json
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editors, OS files and local tooling
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+.claude/
+.cursor/
