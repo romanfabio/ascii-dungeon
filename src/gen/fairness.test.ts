@@ -53,6 +53,25 @@ describe('the scripted players', () => {
 });
 
 describe('fair floors', () => {
+  it('start with nothing explored: the simulated players never leave marks on the floor', () => {
+    // Regression: the safe-walk simulation once wrote its field of view into the floor it returned,
+    // so floors from 12 on began with the route already discovered.
+    for (const floor of [12, 21, 50, 100]) {
+      for (let s = 0; s < 5; s++) {
+        const map = generateFloor(`EXPLORED${s}`, floor);
+        expect(
+          map.explored.reduce((sum, v) => sum + v, 0),
+          `floor ${floor} seed ${s}`,
+        ).toBe(0);
+      }
+    }
+    const map = generateFloor('EXPLORED', 40);
+    runDasher(map, 'EXPLORED');
+    runPlanner(map, 'EXPLORED');
+    runExplorer(map, 'EXPLORED');
+    expect(map.explored.reduce((sum, v) => sum + v, 0)).toBe(0);
+  }, 60_000);
+
   it('a planner who waits where the proof says never loses a life on the first walk (safe walk)', () => {
     let walked = 0;
     for (const floor of [24, 30, 40, 50, 60, 80, 100]) {

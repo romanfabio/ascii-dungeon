@@ -108,8 +108,14 @@ function play(
   return run;
 }
 
+/**
+ * A game on `map` for a scripted player. The simulated game writes what the player has seen into
+ * `floor.explored`, so it gets its own copy: the generator calls this on the floor it is about to
+ * return, and the real player must start on that floor with nothing explored.
+ */
 function freshState(map: FloorMap, seed: string): GameState {
-  return createGameState(seed, map, { sightRadius: paramsForFloor(map.floorNumber).sightRadius });
+  const own: FloorMap = { ...map, explored: new Uint8Array(map.explored) };
+  return createGameState(seed, own, { sightRadius: paramsForFloor(map.floorNumber).sightRadius });
 }
 
 /** The dasher: always the shortest way from where it stands, never waiting (a shove just re-routes it). */

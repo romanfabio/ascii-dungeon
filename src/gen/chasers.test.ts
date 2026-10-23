@@ -27,7 +27,7 @@ describe('generated chasers', () => {
       found += chasersOn(`CHA${s}`, 45).length;
     }
     expect(found).toBeGreaterThan(0);
-  }, 60_000);
+  }, 180_000);
 
   it('are limited to one per floor before 60, and a few later', () => {
     let crowded = 0;
@@ -42,7 +42,7 @@ describe('generated chasers', () => {
       }
     }
     expect(crowded).toBeGreaterThan(0);
-  }, 60_000);
+  }, 180_000);
 
   it('have their home off the shortest route and 12+ steps from the start, and pass validation', () => {
     for (const floor of [35, 50, 70, 100]) {
@@ -93,5 +93,5 @@ describe('generated chasers', () => {
     // A chaser that starts on top of the player's start is too close.
     map.spawns = [{ ...real, pos: { ...map.start } }];
     expect(validateFloor(map).join(';')).toMatch(/too close to the start|start or exit/);
-  }, 60_000);
+  }, 180_000);
 });

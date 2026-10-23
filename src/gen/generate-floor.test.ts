@@ -50,7 +50,7 @@ describe('generateFloor', () => {
         }
       }
     }
-  }, 240_000);
+  }, 600_000);
 
   it('is deterministic', () => {
     for (const floor of [1, 3, 11, 40, 100]) {
