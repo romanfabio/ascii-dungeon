@@ -15,6 +15,7 @@ import { type MenuItem } from './text-ui';
 
 export interface SettingsScreenOptions {
   onControls(): void;
+  onLicenses(): void;
   onBack(): void;
 }
 
@@ -58,6 +59,7 @@ const ROWS = [
   'dpadVisible',
   'dpadSize',
   'controls',
+  'licenses',
   'back',
 ] as const;
 
@@ -82,6 +84,7 @@ export class SettingsScreen extends MenuScreen {
       { label: t('dpadVisible'), value: t(DPAD_VISIBLE_LABELS[s.dpadVisible]) },
       { label: t('dpadSize'), value: t(DPAD_SIZE_LABELS[s.dpadSize]) },
       { label: t('controls') },
+      { label: t('licenses') },
       { label: t('back') },
     ];
   }
@@ -90,6 +93,8 @@ export class SettingsScreen extends MenuScreen {
     switch (ROWS[index]) {
       case 'controls':
         return this.opts.onControls();
+      case 'licenses':
+        return this.opts.onLicenses();
       case 'back':
         return this.opts.onBack();
       default:

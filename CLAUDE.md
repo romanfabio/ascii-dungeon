@@ -154,7 +154,8 @@ shared with no other enemy; contact (walking into one, or it moving onto you) co
 
 ### UI and input
 
-- **Screens:** Title (Continue, New Run, Settings, deepest floor), Game, FloorTransition, Pause (Resume,
+- **Screens:** Title (Continue, New Run, Bestiary, Settings, deepest floor), Licenses (Settings; pages through
+  `public/licenses/THIRD_PARTY_LICENSES.txt`), Game, FloorTransition, Pause (Resume,
   Restart floor, Settings, Quit; Restart never refills lives), Settings, Controls (key rebinding),
   Game Over, Victory. Menus work with keys and taps.
 - **HUD:** hearts row (`<3` full, `</3` lost) above the stats row `FLOOR n/100  STEPS  TIME` with tappable
@@ -276,7 +277,8 @@ what was and was not verified.
 - `git status` must be clean of secrets: keystores, `keystore.properties`, `local.properties`, `.env*` are gitignored
   (check with `git check-ignore -v <file>`). Nothing in the repo needs a key or a network service.
 - Licence: the game is MIT (`LICENSE`); when a dependency or asset is added, update `THIRD_PARTY_NOTICES.md` and keep
-  anything that needs its licence text shipped (the font's is in `public/licenses/`). Only permissive licences.
+  anything that needs its licence text shipped: add its text to `public/licenses/THIRD_PARTY_LICENSES.txt` (shown in the app
+  under Settings, then Licenses; the font's own file is also in `public/licenses/`). Only permissive licences.
 - Bump the version as described under Commands, then run the full check and rebuild the APK.
 - **Web:** `.github/workflows/pages.yml` builds `dist/` and deploys it to GitHub Pages on every push to `main`
   (Settings > Pages > Source: GitHub Actions). The build uses relative paths, so it works under a sub-path.

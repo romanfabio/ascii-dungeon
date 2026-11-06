@@ -76,6 +76,7 @@ export const en = {
   descending: 'Descending to floor {floor}...',
   pressToContinue: 'Press any key or tap to continue',
   bestiary: 'Bestiary',
+  licenses: 'Licenses',
   bestiaryTitle: 'BESTIARY',
   bestiaryCount: 'Met: {met} of {total}',
   bestiaryEmpty: 'Nothing met yet',

@@ -110,4 +110,5 @@ floors and enemies are covered by automated tests and simulations, so balance fe
 ## Licence
 
 [MIT](LICENSE). Third-party components (the JetBrains Mono font under the SIL Open Font License, Capacitor, AndroidX and
-the build tools) are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+the build tools) are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). The full licence texts ship with the game: in the app under
+Settings, then Licenses, and as a plain file at [`public/licenses/THIRD_PARTY_LICENSES.txt`](public/licenses/THIRD_PARTY_LICENSES.txt).

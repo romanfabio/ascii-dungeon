@@ -77,6 +77,7 @@ export const it: Record<TextKey, string> = {
   descending: 'Discesa al piano {floor}...',
   pressToContinue: 'Premi un tasto o tocca per continuare',
   bestiary: 'Bestiario',
+  licenses: 'Licenze',
   bestiaryTitle: 'BESTIARIO',
   bestiaryCount: 'Incontrati: {met} su {total}',
   bestiaryEmpty: 'Nessuno incontrato',

@@ -1,6 +1,6 @@
 {
   "name": "ascii-dungeon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A turn-based ASCII maze crawler: descend 100 procedurally generated floors with fog of war, 3 lives and 17 kinds of enemy.",
   "license": "MIT",
   "author": "Fabio Roman",

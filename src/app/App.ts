@@ -25,6 +25,7 @@ import {
 } from '../ui/GameScreen';
 import { PauseScreen } from '../ui/PauseScreen';
 import { BestiaryScreen } from '../ui/BestiaryScreen';
+import { LicensesScreen } from '../ui/LicensesScreen';
 import { SettingsScreen } from '../ui/SettingsScreen';
 import { TitleScreen } from '../ui/TitleScreen';
 import { type Screen } from './Screen';
@@ -212,6 +213,7 @@ export class App {
     this.push(
       new SettingsScreen(this.ctx, {
         onControls: () => this.push(new ControlsScreen(this.ctx, { onBack: () => this.pop() })),
+        onLicenses: () => this.push(new LicensesScreen(this.ctx, { onBack: () => this.pop() })),
         onBack: () => this.pop(),
       }),
     );

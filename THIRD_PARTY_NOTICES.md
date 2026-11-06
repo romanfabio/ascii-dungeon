@@ -27,6 +27,12 @@ dependency of Vite): it is a build tool, is not part of the game and is not modi
 The Gradle wrapper (`android/gradlew`, `android/gradle/wrapper/`) is Apache-2.0, from the Gradle
 project.
 
+## Where the licence texts are
+
+The full texts of every licence above are in [`public/licenses/THIRD_PARTY_LICENSES.txt`](public/licenses/THIRD_PARTY_LICENSES.txt).
+The file is shipped with the web build and the APK, and the game shows it under **Settings, then Licenses**.
+When a shipped dependency is added or changed, update that file (and this one).
+
 ## Original assets
 
 The app icon, the splash screen and everything drawn in the game (glyphs, colours, texts, the
