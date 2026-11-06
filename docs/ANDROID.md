@@ -56,13 +56,13 @@ the keystore or its passwords you can never publish an update that installs over
 2. Create `android/keystore.properties` (gitignored; never commit it):
 
    ```properties
-   storeFile=../../ascii-dungeon.keystore
+   storeFile=C:/path/outside/the/repo/ascii-dungeon.keystore
    storePassword=YOUR_STORE_PASSWORD
    keyAlias=ascii-dungeon
    keyPassword=YOUR_KEY_PASSWORD
    ```
 
-   `storeFile` is relative to `android/app/`.
+   `storeFile` is an absolute path, or relative to `android/app/`. Keep the keystore outside the repository.
 
 3. Build:
 

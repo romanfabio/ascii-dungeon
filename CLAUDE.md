@@ -278,3 +278,8 @@ what was and was not verified.
 - Licence: the game is MIT (`LICENSE`); when a dependency or asset is added, update `THIRD_PARTY_NOTICES.md` and keep
   anything that needs its licence text shipped (the font's is in `public/licenses/`). Only permissive licences.
 - Bump the version as described under Commands, then run the full check and rebuild the APK.
+- **Web:** `.github/workflows/pages.yml` builds `dist/` and deploys it to GitHub Pages on every push to `main`
+  (Settings > Pages > Source: GitHub Actions). The build uses relative paths, so it works under a sub-path.
+- **Android release:** `npm run release:android` signs with `android/keystore.properties` (gitignored), which points to a
+  keystore kept outside the repo. Back the keystore up: without it updates cannot install over existing installs. Then tag
+  (`git tag -a vX.Y.Z -m ...`), push the tag, and attach the APK to a GitHub release (the Actions workflow does not build the APK).

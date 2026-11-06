@@ -29,9 +29,19 @@ Clear floor 100 to win.
 - **Works on a phone:** on-screen D-pad, swipe, safe-area aware, portrait layout. Three themes (default, high contrast,
   colour-blind safe), English and Italian.
 
+<p align="center">
+  <img src="docs/screenshots/title.jpg" alt="Title screen" width="23%">
+  <img src="docs/screenshots/floor-14.jpg" alt="Floor 14: a Patroller and a Bloodstone come into view" width="23%">
+  <img src="docs/screenshots/floor-34.jpg" alt="Floor 34: a Wanderer beside you and a Bouncer gate ahead" width="23%">
+  <img src="docs/screenshots/bestiary.jpg" alt="The Bestiary" width="23%">
+</p>
+
 ## Play
 
-Requirements: [Node.js](https://nodejs.org) 22.12 or newer.
+- **In the browser:** https://romanfabio.github.io/ascii-dungeon/ (works on phones too; your progress is saved in the browser).
+- **On Android (7.0+):** download the APK from the [latest release](https://github.com/romanfabio/ascii-dungeon/releases/latest) and open it
+  (you may need to allow installing apps from your browser or file manager).
+- **From source** (requires [Node.js](https://nodejs.org) 22.12 or newer):
 
 ```bash
 npm install
